@@ -1,4 +1,4 @@
-stock_specs
+agile bdd
 ===========
 
-stock_specs
+agile bdd sample
