@@ -5,12 +5,17 @@
 
 
     <property name="dir.concordion.output" value="target/concordion-output"/>
-	<property name="repo" value="https://oss.sonatype.org/content/repositories/releases"/>
+	<property name="repo" value="http://repo1.maven.org/maven2"/>
     <property name="cucumber-jvm.version" value="1.1.2"/>
     <property name="cucumber-html.version" value="0.2.2"/>
     <property name="jchronic.version" value="0.2.6"/>
     <property name="junit.version" value="4.11"/>
+    <property name="concordion.version" value="1.4.2"/>
+    <property name="hamcrest-core.version" value="1.3"/>
+    <property name="xom.version" value="1.2.5"/>
+    <property name="ognl.version" value="2.6.9"/>
     <property name="jars" value="lib"/>
+
 
     <path id="compile.classpath">
         <fileset dir="lib" includes="**/*.jar"/>
@@ -40,6 +45,14 @@
              dest="${jars}/jchronic-${jchronic.version}.jar"/>
         <get src="${repo}/junit/junit/${junit.version}/junit-${junit.version}.jar"
              dest="${jars}/junit-${junit.version}.jar"/>
+        <get src="${repo}/org/concordion/concordion/${concordion.version}/concordion-${concordion.version}.jar"
+             dest="${jars}/concordion-${concordion.version}.jar"/>
+         <get src="${repo}/xom/xom/${xom.version}/xom-${xom.version}.jar"
+             dest="${jars}/xom-${xom.version}.jar"/>      
+         <get src="${repo}/ognl/ognl/${ognl.version}/ognl-${ognl.version}.jar"
+             dest="${jars}/ognl-${ognl.version}.jar"/>  
+         <get src="${repo}/org/hamcrest/hamcrest-core/${hamcrest-core.version}/hamcrest-core-${hamcrest-core.version}.jar"
+             dest="${jars}/hamcrest-core-${hamcrest-core.version}.jar"/>                       
     </target>
 
 
