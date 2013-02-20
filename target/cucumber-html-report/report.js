@@ -235,7 +235,7 @@ formatter.step({
   "rows": [
     {
       "cells": [
-        "Stock Id",
+        "Stock ID",
         "Stock Name",
         "Buy Price",
         "Quantity",
@@ -299,30 +299,29 @@ formatter.match({
   "location": "StockPositionStepdefs.givenExistingPosition(DataTable)"
 });
 formatter.result({
-  "duration": 139433000,
+  "duration": 71390000,
   "status": "passed"
 });
 formatter.match({
   "location": "StockPositionStepdefs.calTrades(DataTable)"
 });
 formatter.result({
-  "duration": 182000,
+  "duration": 155000,
   "status": "passed"
 });
 formatter.match({
   "location": "StockPositionStepdefs.checkTheFinalPositions(DataTable)"
 });
 formatter.result({
-  "duration": 7766000,
-  "status": "passed"
+  "duration": 30666000,
+  "status": "failed",
+  "error_message": "cucumber.runtime.table.TableDiffException: Tables were not identical:\n      | Stock ID | Stock Name | Buy Price | Quantity | Buy Date   | Capital | Current Price | Market Value | Profit | Earning Rate |\n    - | 000001   | HSBC       | 67.33     | 1500     | 2012-08-01 | 101000  | 80            | 120000       | 19000  | 19%          |\n    - | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |\n    - | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 25%          |\n    + |          | HSBC       | 67.33     | 1,500    | 8/1/12     | 101,000 |               | 120,000      | 19,000 | 0.19         |\n    + |          | HASE       | 50.83     | 6,000    | 7/1/12     | 305,000 |               | 360,000      | 55,000 | 0.18         |\n    + |          | 300ETF     | 2         | 51,000   | 1/5/12     | 102,100 |               | 127,500      | 25,400 | 0.25         |\n      | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |\n      | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 25%          |\n\n\tat cucumber.runtime.table.TableDiffer.calculateDiffs(TableDiffer.java:37)\n\tat cucumber.api.DataTable.diff(DataTable.java:147)\n\tat cucumber.api.DataTable.diff(DataTable.java:137)\n\tat agile.demo.cumcuber.StockPositionStepdefs.checkTheFinalPositions(StockPositionStepdefs.java:79)\n\tat ✽.Then the new position is as below:(agile/demo/cumcuber/StockPosition.feature:20)\n"
 });
 formatter.match({
-  "location": "StockPositionStepdefs.checkFinal(Position\u003e)"
+  "location": "StockPositionStepdefs.expectThePosition(DataTable)"
 });
 formatter.result({
-  "duration": 12394000,
-  "status": "failed",
-  "error_message": "cucumber.runtime.CucumberException: Can\u0027t assign null value to one of the primitive fields in java.util.Date. Please use boxed types.\n\tat cucumber.runtime.table.TableConverter.toListOfComplexType(TableConverter.java:107)\n\tat cucumber.runtime.table.TableConverter.convert(TableConverter.java:72)\n\tat cucumber.api.DataTable.convert(DataTable.java:77)\n\tat cucumber.runtime.StepDefinitionMatch.tableArgument(StepDefinitionMatch.java:101)\n\tat cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:81)\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:38)\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:268)\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:45)\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:40)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:36)\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:83)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:77)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:82)\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)\n"
+  "status": "skipped"
 });
 formatter.uri("agile/demo/cumcuber/helloworld.feature");
 formatter.feature({
@@ -365,14 +364,14 @@ formatter.match({
   "location": "HelloStepdefs.I_have_a_hello_app_with(String)"
 });
 formatter.result({
-  "duration": 103000,
+  "duration": 170000,
   "status": "passed"
 });
 formatter.match({
   "location": "HelloStepdefs.I_ask_it_to_say_hi()"
 });
 formatter.result({
-  "duration": 32000,
+  "duration": 40000,
   "status": "passed"
 });
 formatter.match({
@@ -385,7 +384,7 @@ formatter.match({
   "location": "HelloStepdefs.it_should_answer_with(String)"
 });
 formatter.result({
-  "duration": 1198000,
+  "duration": 1354000,
   "status": "passed"
 });
 formatter.scenario({
@@ -450,21 +449,21 @@ formatter.match({
   "location": "ShoppingStepdefs.a_shopping_list(ShoppingStepdefs$ShoppingItem\u003e)"
 });
 formatter.result({
-  "duration": 1741000,
+  "duration": 4719000,
   "status": "passed"
 });
 formatter.match({
   "location": "ShoppingStepdefs.I_print_that_list()"
 });
 formatter.result({
-  "duration": 276000,
+  "duration": 203000,
   "status": "passed"
 });
 formatter.match({
   "location": "ShoppingStepdefs.it_should_look_like(String)"
 });
 formatter.result({
-  "duration": 26000,
+  "duration": 25000,
   "status": "passed"
 });
 formatter.scenario({
@@ -500,7 +499,7 @@ formatter.match({
   "location": "TimeStepdefs.today_is(Calendar)"
 });
 formatter.result({
-  "duration": 1752000,
+  "duration": 1766000,
   "status": "passed"
 });
 formatter.match({
@@ -513,7 +512,7 @@ formatter.match({
   "location": "TimeStepdefs.I_did_laundry_time_ago(Calendar)"
 });
 formatter.result({
-  "duration": 32607000,
+  "duration": 31175000,
   "status": "passed"
 });
 formatter.match({
@@ -526,7 +525,7 @@ formatter.match({
   "location": "TimeStepdefs.my_laundry_day_must_have_been(Calendar)"
 });
 formatter.result({
-  "duration": 201000,
+  "duration": 261000,
   "status": "passed"
 });
 });
