@@ -295,21 +295,34 @@ formatter.step({
     }
   ]
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "StockPositionStepdefs.givenExistingPosition(DataTable)"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 139433000,
+  "status": "passed"
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "StockPositionStepdefs.calTrades(DataTable)"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 182000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StockPositionStepdefs.checkTheFinalPositions(DataTable)"
+});
+formatter.result({
+  "duration": 7766000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "StockPositionStepdefs.checkFinal(Position\u003e)"
+});
+formatter.result({
+  "duration": 12394000,
+  "status": "failed",
+  "error_message": "cucumber.runtime.CucumberException: Can\u0027t assign null value to one of the primitive fields in java.util.Date. Please use boxed types.\n\tat cucumber.runtime.table.TableConverter.toListOfComplexType(TableConverter.java:107)\n\tat cucumber.runtime.table.TableConverter.convert(TableConverter.java:72)\n\tat cucumber.api.DataTable.convert(DataTable.java:77)\n\tat cucumber.runtime.StepDefinitionMatch.tableArgument(StepDefinitionMatch.java:101)\n\tat cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:81)\n\tat cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:38)\n\tat cucumber.runtime.Runtime.runStep(Runtime.java:268)\n\tat cucumber.runtime.model.StepContainer.runStep(StepContainer.java:45)\n\tat cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:40)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:36)\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:83)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:77)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:82)\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)\n"
 });
 formatter.uri("agile/demo/cumcuber/helloworld.feature");
 formatter.feature({
@@ -342,17 +355,38 @@ formatter.step({
   "keyword": "Then ",
   "line": 6
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "arguments": [
+    {
+      "val": "Howdy",
+      "offset": 25
+    }
+  ],
+  "location": "HelloStepdefs.I_have_a_hello_app_with(String)"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 103000,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "HelloStepdefs.I_ask_it_to_say_hi()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 32000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Howdy World",
+      "offset": 23
+    }
+  ],
+  "location": "HelloStepdefs.it_should_answer_with(String)"
+});
+formatter.result({
+  "duration": 1198000,
+  "status": "passed"
 });
 formatter.scenario({
   "id": "hello-world;print-my-shopping-list",
@@ -412,17 +446,26 @@ formatter.step({
     "content_type": ""
   }
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "location": "ShoppingStepdefs.a_shopping_list(ShoppingStepdefs$ShoppingItem\u003e)"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 1741000,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "location": "ShoppingStepdefs.I_print_that_list()"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 276000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ShoppingStepdefs.it_should_look_like(String)"
+});
+formatter.result({
+  "duration": 26000,
+  "status": "passed"
 });
 formatter.scenario({
   "id": "hello-world;transformation",
@@ -447,16 +490,43 @@ formatter.step({
   "keyword": "Then ",
   "line": 28
 });
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+formatter.match({
+  "arguments": [
+    {
+      "val": "Dec 6, 2012",
+      "offset": 10
+    }
+  ],
+  "location": "TimeStepdefs.today_is(Calendar)"
 });
-formatter.match({});
 formatter.result({
-  "status": "undefined"
+  "duration": 1752000,
+  "status": "passed"
 });
-formatter.match({});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2 days ago",
+      "offset": 14
+    }
+  ],
+  "location": "TimeStepdefs.I_did_laundry_time_ago(Calendar)"
+});
 formatter.result({
-  "status": "undefined"
+  "duration": 32607000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Dec 4, 2012",
+      "offset": 31
+    }
+  ],
+  "location": "TimeStepdefs.my_laundry_day_must_have_been(Calendar)"
+});
+formatter.result({
+  "duration": 201000,
+  "status": "passed"
 });
 });
