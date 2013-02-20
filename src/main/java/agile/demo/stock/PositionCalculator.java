@@ -1,6 +1,7 @@
 package agile.demo.stock;
 
 import java.util.List;
+import java.util.Map;
 
 public interface PositionCalculator {
 	/**
@@ -14,4 +15,6 @@ public interface PositionCalculator {
 	 * @return
 	 */
 	public List<Position> getLatestPosition();
+	
+	public List<Map<String,String>> getLatestPositionAsMap();
 }
