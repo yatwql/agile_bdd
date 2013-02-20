@@ -1,0 +1,9 @@
+Testsuite: agile.demo.concordion.HelloWorldTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.279 sec
+------------- Standard Output ---------------
+/Users/wang/work/zooBox/agile_bdd/target/concordion-output/agile/demo/concordion/HelloWorld.html
+Successes: 1, Failures: 0
+
+------------- ---------------- ---------------
+
+Testcase: testProcessSpecification took 0.271 sec

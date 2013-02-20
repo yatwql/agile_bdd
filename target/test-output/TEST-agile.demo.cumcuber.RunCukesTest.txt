@@ -1,0 +1,197 @@
+Testsuite: agile.demo.cumcuber.RunCukesTest
+Tests run: 26, Failures: 0, Errors: 2, Time elapsed: 0.552 sec
+------------- Standard Output ---------------
+cal
+checkTheFinalPositions
+
+cucumber.runtime.CucumberException: Can't assign null value to one of the primitive fields in java.util.Date. Please use boxed types.
+	at cucumber.runtime.table.TableConverter.toListOfComplexType(TableConverter.java:107)
+	at cucumber.runtime.table.TableConverter.convert(TableConverter.java:72)
+	at cucumber.api.DataTable.convert(DataTable.java:77)
+	at cucumber.runtime.StepDefinitionMatch.tableArgument(StepDefinitionMatch.java:101)
+	at cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:81)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:38)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:268)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:45)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:40)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:36)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:83)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:77)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:82)
+	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:518)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1052)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:879)
+
+Feature: Stock Position Calculation
+
+  Scenario: As an investor,I need to summarize my stock position with the new trades.For having a clear view on my stock position and investment P/L. [90m# agile/demo/cumcuber/StockPosition.feature:3[0m
+    [90mGiven [0m[90mthe existing position as below:[0m                                                                                                             [90m# StockPositionStepdefs.givenExistingPosition(DataTable)[0m
+[1A    [32mGiven [0m[32mthe existing position as below:[0m                                                                                                             [90m# StockPositionStepdefs.givenExistingPosition(DataTable)[0m
+    [90mWhen [0m[90mthere are following trades:[0m                                                                                                                  [90m# StockPositionStepdefs.calTrades(DataTable)[0m
+[1A    [32mWhen [0m[32mthere are following trades:[0m                                                                                                                  [90m# StockPositionStepdefs.calTrades(DataTable)[0m
+    [90mThen [0m[90mthe new position is as below:[0m                                                                                                                [90m# StockPositionStepdefs.checkTheFinalPositions(DataTable)[0m
+[1A    [32mThen [0m[32mthe new position is as below:[0m                                                                                                                [90m# StockPositionStepdefs.checkTheFinalPositions(DataTable)[0m
+    [90mThen [0m[90mthe final position is as below:[0m                                                                                                              [90m# StockPositionStepdefs.checkFinal(Position>)[0m
+[1A    [31mThen [0m[31mthe final position is as below:[0m                                                                                                              [90m# StockPositionStepdefs.checkFinal(Position>)[0m
+      [31mcucumber.runtime.CucumberException: Can't assign null value to one of the primitive fields in java.util.Date. Please use boxed types.
+      	at cucumber.runtime.table.TableConverter.toListOfComplexType(TableConverter.java:107)
+      	at cucumber.runtime.table.TableConverter.convert(TableConverter.java:72)
+      	at cucumber.api.DataTable.convert(DataTable.java:77)
+      	at cucumber.runtime.StepDefinitionMatch.tableArgument(StepDefinitionMatch.java:101)
+      	at cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:81)
+      	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:38)
+      	at cucumber.runtime.Runtime.runStep(Runtime.java:268)
+      	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:45)
+      	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:40)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:36)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:83)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:77)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:82)
+      	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:38)
+      	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:518)
+      	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1052)
+      	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:879)
+      [0m
+Feature: Hello World
+
+  Scenario: Say hello                        [90m# agile/demo/cumcuber/helloworld.feature:3[0m
+    [90mGiven [0m[90mI have a hello app with "[0m[90m[1mHowdy[0m[90m"[0m    [90m# HelloStepdefs.I_have_a_hello_app_with(String)[0m
+[1A    [32mGiven [0m[32mI have a hello app with "[0m[32m[1mHowdy[0m[32m"[0m    [90m# HelloStepdefs.I_have_a_hello_app_with(String)[0m
+    [90mWhen [0m[90mI ask it to say hi[0m                  [90m# HelloStepdefs.I_ask_it_to_say_hi()[0m
+[1A    [32mWhen [0m[32mI ask it to say hi[0m                  [90m# HelloStepdefs.I_ask_it_to_say_hi()[0m
+    [90mThen [0m[90mit should answer with "[0m[90m[1mHowdy World[0m[90m"[0m [90m# HelloStepdefs.it_should_answer_with(String)[0m
+[1A    [32mThen [0m[32mit should answer with "[0m[32m[1mHowdy World[0m[32m"[0m [90m# HelloStepdefs.it_should_answer_with(String)[0m
+
+  Scenario: Print my shopping list [90m# agile/demo/cumcuber/helloworld.feature:8[0m
+    The list should be printed in alphabetical order of the item names
+
+    [90mGiven [0m[90ma shopping list:[0m         [90m# ShoppingStepdefs.a_shopping_list(ShoppingStepdefs$ShoppingItem>)[0m
+[1A    [32mGiven [0m[32ma shopping list:[0m         [90m# ShoppingStepdefs.a_shopping_list(ShoppingStepdefs$ShoppingItem>)[0m
+    [90mWhen [0m[90mI print that list[0m         [90m# ShoppingStepdefs.I_print_that_list()[0m
+[1A    [32mWhen [0m[32mI print that list[0m         [90m# ShoppingStepdefs.I_print_that_list()[0m
+    [90mThen [0m[90mit should look like:[0m      [90m# ShoppingStepdefs.it_should_look_like(String)[0m
+      """
+      1 Cocoa
+      2 Milk
+      5 Soap
+
+      """
+[1A    [32mThen [0m[32mit should look like:[0m      [90m# ShoppingStepdefs.it_should_look_like(String)[0m
+      """
+      1 Cocoa
+      2 Milk
+      5 Soap
+
+      """
+
+  Scenario: Transformation                           [90m# agile/demo/cumcuber/helloworld.feature:25[0m
+    [90mGiven [0m[90mtoday is "[0m[90m[1mDec 6, 2012[0m[90m"[0m                     [90m# TimeStepdefs.today_is(Calendar)[0m
+[1A    [32mGiven [0m[32mtoday is "[0m[32m[1mDec 6, 2012[0m[32m"[0m                     [90m# TimeStepdefs.today_is(Calendar)[0m
+    [90mAnd [0m[90mI did laundry [0m[90m[1m2 days ago[0m                     [90m# TimeStepdefs.I_did_laundry_time_ago(Calendar)[0m
+[1A    [32mAnd [0m[32mI did laundry [0m[32m[1m2 days ago[0m                     [90m# TimeStepdefs.I_did_laundry_time_ago(Calendar)[0m
+    [90mThen [0m[90mmy laundry day must have been "[0m[90m[1mDec 4, 2012[0m[90m"[0m [90m# TimeStepdefs.my_laundry_day_must_have_been(Calendar)[0m
+[1A    [32mThen [0m[32mmy laundry day must have been "[0m[32m[1mDec 4, 2012[0m[32m"[0m [90m# TimeStepdefs.my_laundry_day_must_have_been(Calendar)[0m
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+{cells=[000001, HSBC, 67.33, 1500, 2012-08-01, 101000, 80, 120000, 19000, 19%], line=22}
+[[000001, HSBC, 67.33, 1500, 2012-08-01, 101000, 80, 120000, 19000, 19%], 22]
+      | Stock ID | Stock Name | Buy Price | Quantity | Buy Date   | Capital | Current Price | Market Value | Profit | Earning Rate |
+      | 000001   | HSBC       | 67.33     | 1500     | 2012-08-01 | 101000  | 80            | 120000       | 19000  | 19%          |
+      | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |
+      | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 25%          |
+
+------------- ---------------- ---------------
+
+Testcase: Given the existing position as below: took 0 sec
+Testcase: When there are following trades: took 0 sec
+Testcase: Then the new position is as below: took 0 sec
+Testcase: Then the final position is as below: took 0.001 sec
+	Caused an ERROR
+Can't assign null value to one of the primitive fields in java.util.Date. Please use boxed types.
+cucumber.runtime.CucumberException: Can't assign null value to one of the primitive fields in java.util.Date. Please use boxed types.
+	at cucumber.runtime.table.TableConverter.toListOfComplexType(TableConverter.java:107)
+	at cucumber.runtime.table.TableConverter.convert(TableConverter.java:72)
+	at cucumber.api.DataTable.convert(DataTable.java:77)
+	at cucumber.runtime.StepDefinitionMatch.tableArgument(StepDefinitionMatch.java:101)
+	at cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:81)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:38)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:268)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:45)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:40)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:36)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:83)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:77)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:82)
+
+Testcase: Scenario: As an investor,I need to summarize my stock position with the new trades.For having a clear view on my stock position and investment P/L. took 0 sec
+	Caused an ERROR
+Can't assign null value to one of the primitive fields in java.util.Date. Please use boxed types.
+cucumber.runtime.CucumberException: Can't assign null value to one of the primitive fields in java.util.Date. Please use boxed types.
+	at cucumber.runtime.table.TableConverter.toListOfComplexType(TableConverter.java:107)
+	at cucumber.runtime.table.TableConverter.convert(TableConverter.java:72)
+	at cucumber.api.DataTable.convert(DataTable.java:77)
+	at cucumber.runtime.StepDefinitionMatch.tableArgument(StepDefinitionMatch.java:101)
+	at cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:81)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:38)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:268)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:45)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:40)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:36)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:83)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:77)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:82)
+
+Testcase: Scenario: As an investor,I need to summarize my stock position with the new trades.For having a clear view on my stock position and investment P/L. took 0 sec
+Testcase: Given I have a hello app with "Howdy" took 0 sec
+Testcase: When I ask it to say hi took 0 sec
+Testcase: Then it should answer with "Howdy World" took 0 sec
+Testcase: Scenario: Say hello took 0 sec
+Testcase: Given a shopping list: took 0 sec
+Testcase: When I print that list took 0 sec
+Testcase: Then it should look like: took 0 sec
+Testcase: Scenario: Print my shopping list took 0 sec
+Testcase: Given today is "Dec 6, 2012" took 0 sec
+Testcase: And I did laundry 2 days ago took 0 sec
+Testcase: Then my laundry day must have been "Dec 4, 2012" took 0 sec
+Testcase: Scenario: Transformation took 0 sec

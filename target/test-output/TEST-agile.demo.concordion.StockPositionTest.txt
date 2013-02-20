@@ -1,0 +1,9 @@
+Testsuite: agile.demo.concordion.StockPositionTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.556 sec
+------------- Standard Output ---------------
+/Users/wang/work/zooBox/agile_bdd/target/concordion-output/agile/demo/concordion/StockPosition.html
+Successes: 30, Failures: 0
+
+------------- ---------------- ---------------
+
+Testcase: testProcessSpecification took 0.556 sec
