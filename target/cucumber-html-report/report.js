@@ -228,100 +228,26 @@ formatter.step({
     }
   ]
 });
-formatter.step({
-  "name": "the final position is as below:",
-  "keyword": "Then ",
-  "line": 27,
-  "rows": [
-    {
-      "cells": [
-        "Stock ID",
-        "Stock Name",
-        "Buy Price",
-        "Quantity",
-        "Buy Date",
-        "Capital",
-        "Current Price",
-        "Market Value",
-        "Profit",
-        "Earning Rate"
-      ],
-      "line": 28
-    },
-    {
-      "cells": [
-        "000001",
-        "HSBC",
-        "67.33",
-        "1500",
-        "2012-08-01",
-        "101000",
-        "80",
-        "120000",
-        "19000",
-        "19%"
-      ],
-      "line": 29
-    },
-    {
-      "cells": [
-        "000002",
-        "HASE",
-        "50.83",
-        "6000",
-        "2012-07-01",
-        "305000",
-        "60",
-        "360000",
-        "55000",
-        "18%"
-      ],
-      "line": 30
-    },
-    {
-      "cells": [
-        "000003",
-        "300ETF",
-        "2.00",
-        "51000",
-        "2012-01-05",
-        "102100",
-        "2.5",
-        "127500",
-        "25400",
-        "25%"
-      ],
-      "line": 31
-    }
-  ]
-});
 formatter.match({
   "location": "StockPositionStepdefs.givenExistingPosition(DataTable)"
 });
 formatter.result({
-  "duration": 71390000,
+  "duration": 70560000,
   "status": "passed"
 });
 formatter.match({
   "location": "StockPositionStepdefs.calTrades(DataTable)"
 });
 formatter.result({
-  "duration": 155000,
+  "duration": 161000,
   "status": "passed"
 });
 formatter.match({
-  "location": "StockPositionStepdefs.checkTheFinalPositions(DataTable)"
+  "location": "StockPositionStepdefs.expectThePositionWithMap(DataTable)"
 });
 formatter.result({
-  "duration": 30666000,
-  "status": "failed",
-  "error_message": "cucumber.runtime.table.TableDiffException: Tables were not identical:\n      | Stock ID | Stock Name | Buy Price | Quantity | Buy Date   | Capital | Current Price | Market Value | Profit | Earning Rate |\n    - | 000001   | HSBC       | 67.33     | 1500     | 2012-08-01 | 101000  | 80            | 120000       | 19000  | 19%          |\n    - | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |\n    - | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 25%          |\n    + |          | HSBC       | 67.33     | 1,500    | 8/1/12     | 101,000 |               | 120,000      | 19,000 | 0.19         |\n    + |          | HASE       | 50.83     | 6,000    | 7/1/12     | 305,000 |               | 360,000      | 55,000 | 0.18         |\n    + |          | 300ETF     | 2         | 51,000   | 1/5/12     | 102,100 |               | 127,500      | 25,400 | 0.25         |\n      | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |\n      | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 25%          |\n\n\tat cucumber.runtime.table.TableDiffer.calculateDiffs(TableDiffer.java:37)\n\tat cucumber.api.DataTable.diff(DataTable.java:147)\n\tat cucumber.api.DataTable.diff(DataTable.java:137)\n\tat agile.demo.cumcuber.StockPositionStepdefs.checkTheFinalPositions(StockPositionStepdefs.java:79)\n\tat ✽.Then the new position is as below:(agile/demo/cumcuber/StockPosition.feature:20)\n"
-});
-formatter.match({
-  "location": "StockPositionStepdefs.expectThePosition(DataTable)"
-});
-formatter.result({
-  "status": "skipped"
+  "duration": 12756000,
+  "status": "passed"
 });
 formatter.uri("agile/demo/cumcuber/helloworld.feature");
 formatter.feature({
@@ -364,14 +290,14 @@ formatter.match({
   "location": "HelloStepdefs.I_have_a_hello_app_with(String)"
 });
 formatter.result({
-  "duration": 170000,
+  "duration": 115000,
   "status": "passed"
 });
 formatter.match({
   "location": "HelloStepdefs.I_ask_it_to_say_hi()"
 });
 formatter.result({
-  "duration": 40000,
+  "duration": 41000,
   "status": "passed"
 });
 formatter.match({
@@ -384,7 +310,7 @@ formatter.match({
   "location": "HelloStepdefs.it_should_answer_with(String)"
 });
 formatter.result({
-  "duration": 1354000,
+  "duration": 1363000,
   "status": "passed"
 });
 formatter.scenario({
@@ -449,21 +375,21 @@ formatter.match({
   "location": "ShoppingStepdefs.a_shopping_list(ShoppingStepdefs$ShoppingItem\u003e)"
 });
 formatter.result({
-  "duration": 4719000,
+  "duration": 4802000,
   "status": "passed"
 });
 formatter.match({
   "location": "ShoppingStepdefs.I_print_that_list()"
 });
 formatter.result({
-  "duration": 203000,
+  "duration": 161000,
   "status": "passed"
 });
 formatter.match({
   "location": "ShoppingStepdefs.it_should_look_like(String)"
 });
 formatter.result({
-  "duration": 25000,
+  "duration": 20000,
   "status": "passed"
 });
 formatter.scenario({
@@ -499,7 +425,7 @@ formatter.match({
   "location": "TimeStepdefs.today_is(Calendar)"
 });
 formatter.result({
-  "duration": 1766000,
+  "duration": 1642000,
   "status": "passed"
 });
 formatter.match({
@@ -512,7 +438,7 @@ formatter.match({
   "location": "TimeStepdefs.I_did_laundry_time_ago(Calendar)"
 });
 formatter.result({
-  "duration": 31175000,
+  "duration": 31825000,
   "status": "passed"
 });
 formatter.match({
@@ -525,7 +451,7 @@ formatter.match({
   "location": "TimeStepdefs.my_laundry_day_must_have_been(Calendar)"
 });
 formatter.result({
-  "duration": 261000,
+  "duration": 245000,
   "status": "passed"
 });
 });

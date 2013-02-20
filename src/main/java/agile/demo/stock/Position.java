@@ -15,11 +15,11 @@ public class Position {
 	private BigDecimal profit = null;
 	private BigDecimal earningRate = null;
 
-	public String getStockId() {
+	public String getStockID() {
 		return stockId;
 	}
 
-	public void setStockId(String stockId) {
+	public void setStockID(String stockId) {
 		this.stockId = stockId;
 	}
 

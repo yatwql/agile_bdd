@@ -15,7 +15,7 @@
         "steps": [
           {
             "result": {
-              "duration": 71390000,
+              "duration": 70560000,
               "status": "passed"
             },
             "name": "the existing position as below:",
@@ -89,7 +89,7 @@
           },
           {
             "result": {
-              "duration": 155000,
+              "duration": 161000,
               "status": "passed"
             },
             "name": "there are following trades:",
@@ -176,15 +176,14 @@
           },
           {
             "result": {
-              "duration": 30666000,
-              "status": "failed",
-              "error_message": "cucumber.runtime.table.TableDiffException: Tables were not identical:\n      | Stock ID | Stock Name | Buy Price | Quantity | Buy Date   | Capital | Current Price | Market Value | Profit | Earning Rate |\n    - | 000001   | HSBC       | 67.33     | 1500     | 2012-08-01 | 101000  | 80            | 120000       | 19000  | 19%          |\n    - | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |\n    - | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 25%          |\n    + |          | HSBC       | 67.33     | 1,500    | 8/1/12     | 101,000 |               | 120,000      | 19,000 | 0.19         |\n    + |          | HASE       | 50.83     | 6,000    | 7/1/12     | 305,000 |               | 360,000      | 55,000 | 0.18         |\n    + |          | 300ETF     | 2         | 51,000   | 1/5/12     | 102,100 |               | 127,500      | 25,400 | 0.25         |\n      | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |\n      | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 25%          |\n\n\tat cucumber.runtime.table.TableDiffer.calculateDiffs(TableDiffer.java:37)\n\tat cucumber.api.DataTable.diff(DataTable.java:147)\n\tat cucumber.api.DataTable.diff(DataTable.java:137)\n\tat agile.demo.cumcuber.StockPositionStepdefs.checkTheFinalPositions(StockPositionStepdefs.java:79)\n\tat ✽.Then the new position is as below:(agile/demo/cumcuber/StockPosition.feature:20)\n"
+              "duration": 12756000,
+              "status": "passed"
             },
             "name": "the new position is as below:",
             "keyword": "Then ",
             "line": 20,
             "match": {
-              "location": "StockPositionStepdefs.checkTheFinalPositions(DataTable)"
+              "location": "StockPositionStepdefs.expectThePositionWithMap(DataTable)"
             },
             "rows": [
               {
@@ -248,79 +247,6 @@
                 "line": 24
               }
             ]
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "name": "the final position is as below:",
-            "keyword": "Then ",
-            "line": 27,
-            "match": {
-              "location": "StockPositionStepdefs.expectThePosition(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "Stock ID",
-                  "Stock Name",
-                  "Buy Price",
-                  "Quantity",
-                  "Buy Date",
-                  "Capital",
-                  "Current Price",
-                  "Market Value",
-                  "Profit",
-                  "Earning Rate"
-                ],
-                "line": 28
-              },
-              {
-                "cells": [
-                  "000001",
-                  "HSBC",
-                  "67.33",
-                  "1500",
-                  "2012-08-01",
-                  "101000",
-                  "80",
-                  "120000",
-                  "19000",
-                  "19%"
-                ],
-                "line": 29
-              },
-              {
-                "cells": [
-                  "000002",
-                  "HASE",
-                  "50.83",
-                  "6000",
-                  "2012-07-01",
-                  "305000",
-                  "60",
-                  "360000",
-                  "55000",
-                  "18%"
-                ],
-                "line": 30
-              },
-              {
-                "cells": [
-                  "000003",
-                  "300ETF",
-                  "2.00",
-                  "51000",
-                  "2012-01-05",
-                  "102100",
-                  "2.5",
-                  "127500",
-                  "25400",
-                  "25%"
-                ],
-                "line": 31
-              }
-            ]
           }
         ],
         "type": "scenario"
@@ -344,7 +270,7 @@
         "steps": [
           {
             "result": {
-              "duration": 170000,
+              "duration": 115000,
               "status": "passed"
             },
             "name": "I have a hello app with \"Howdy\"",
@@ -362,7 +288,7 @@
           },
           {
             "result": {
-              "duration": 40000,
+              "duration": 41000,
               "status": "passed"
             },
             "name": "I ask it to say hi",
@@ -374,7 +300,7 @@
           },
           {
             "result": {
-              "duration": 1354000,
+              "duration": 1363000,
               "status": "passed"
             },
             "name": "it should answer with \"Howdy World\"",
@@ -402,7 +328,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4719000,
+              "duration": 4802000,
               "status": "passed"
             },
             "name": "a shopping list:",
@@ -444,7 +370,7 @@
           },
           {
             "result": {
-              "duration": 203000,
+              "duration": 161000,
               "status": "passed"
             },
             "name": "I print that list",
@@ -456,7 +382,7 @@
           },
           {
             "result": {
-              "duration": 25000,
+              "duration": 20000,
               "status": "passed"
             },
             "name": "it should look like:",
@@ -483,7 +409,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1766000,
+              "duration": 1642000,
               "status": "passed"
             },
             "name": "today is \"Dec 6, 2012\"",
@@ -501,7 +427,7 @@
           },
           {
             "result": {
-              "duration": 31175000,
+              "duration": 31825000,
               "status": "passed"
             },
             "name": "I did laundry 2 days ago",
@@ -519,7 +445,7 @@
           },
           {
             "result": {
-              "duration": 261000,
+              "duration": 245000,
               "status": "passed"
             },
             "name": "my laundry day must have been \"Dec 4, 2012\"",

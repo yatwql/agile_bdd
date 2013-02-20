@@ -17,7 +17,7 @@ public class PositionCalculatorImpl implements PositionCalculator {
 	public List<Position> getLatestPosition() {
 		List<Position> latestPositions = new ArrayList<Position>();
 		Position pos = new Position();
-		pos.setStockId("000001");
+		pos.setStockID("000001");
 		pos.setStockName("HSBC");
 		pos.setBuyPrice(new BigDecimal(67.33));
 		pos.setQuantity(1500L);
@@ -34,7 +34,7 @@ public class PositionCalculatorImpl implements PositionCalculator {
 		latestPositions.add(pos);
 		
 		pos = new Position();
-		pos.setStockId("000002");
+		pos.setStockID("000002");
 		pos.setStockName("HASE");
 		pos.setBuyPrice(new BigDecimal(50.83));
 		pos.setQuantity(6000L);
@@ -51,7 +51,7 @@ public class PositionCalculatorImpl implements PositionCalculator {
 		latestPositions.add(pos);
 		
 		pos = new Position();
-		pos.setStockId("000003");
+		pos.setStockID("000003");
 		pos.setStockName("300ETF");
 		pos.setBuyPrice(new BigDecimal(2));
 		pos.setQuantity(51000L);
