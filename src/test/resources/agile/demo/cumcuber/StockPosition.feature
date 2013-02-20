@@ -11,7 +11,7 @@ Feature: Stock Position Calculation
     When there are following trades: 
     
     |Stock ID |Stock Name |Price |Quantity |Date |Amount |Buy Or Sell | 
-    |000001 | HSBC |65 |1000 |2012-10-01 |65000 ||BUY| 
+    |000001 | HSBC |65 |1000 |2012-10-01 |65000 |BUY| 
     |000001 |HSBC |68 |500 |2012-11-12 |34000 |SELL |
     |000002 |HASE |55 |1000 |2012-11-12 |55000 |SELL |
     |000002 |HASE |55 |2000 |2012-12-12 |110000 |BUY |

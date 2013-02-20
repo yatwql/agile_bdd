@@ -106,7 +106,6 @@ formatter.step({
         "1000",
         "2012-10-01",
         "65000",
-        "",
         "BUY"
       ],
       "line": 14
@@ -295,34 +294,21 @@ formatter.step({
     }
   ]
 });
-formatter.match({
-  "location": "StockPositionStepdefs.givenExistingPosition(DataTable)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 77696000,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "location": "StockPositionStepdefs.calTrades(DataTable)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 149000,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "location": "StockPositionStepdefs.expectThePositionWithMap(DataTable)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 14162000,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "location": "StockPositionStepdefs.expectThePosition(DataTable)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 18869000,
-  "status": "failed",
-  "error_message": "cucumber.runtime.table.TableDiffException: Tables were not identical:\n      | Stock ID | Stock Name | Buy Price | Quantity | Buy Date   | Capital | Current Price | Market Value | Profit | Earning Rate |\n    - | 000001   | HSBC       | 67.33     | 1500     | 2012-08-01 | 101000  | 80            | 120000       | 19000  | 19%          |\n    - | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |\n    - | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 25%          |\n    + |          | HSBC       | 67.33     | 1,500    | 8/1/12     | 101,000 |               | 120,000      | 19,000 | 0.19         |\n    + |          | HASE       | 50.83     | 6,000    | 7/1/12     | 305,000 |               | 360,000      | 55,000 | 0.18         |\n    + |          | 300ETF     | 2         | 51,000   | 1/5/12     | 102,100 |               | 127,500      | 25,400 | 0.25         |\n      | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |\n      | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 25%          |\n\n\tat cucumber.runtime.table.TableDiffer.calculateDiffs(TableDiffer.java:37)\n\tat cucumber.api.DataTable.diff(DataTable.java:147)\n\tat cucumber.api.DataTable.diff(DataTable.java:137)\n\tat agile.demo.cumcuber.StockPositionStepdefs.expectThePosition(StockPositionStepdefs.java:45)\n\tat ✽.Then the final position is as below:(agile/demo/cumcuber/StockPosition.feature:26)\n"
+  "status": "undefined"
 });
 formatter.uri("agile/demo/cumcuber/helloworld.feature");
 formatter.feature({
@@ -355,38 +341,17 @@ formatter.step({
   "keyword": "Then ",
   "line": 6
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "Howdy",
-      "offset": 25
-    }
-  ],
-  "location": "HelloStepdefs.I_have_a_hello_app_with(String)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 150000,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "location": "HelloStepdefs.I_ask_it_to_say_hi()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 39000,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "Howdy World",
-      "offset": 23
-    }
-  ],
-  "location": "HelloStepdefs.it_should_answer_with(String)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 1156000,
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.scenario({
   "id": "hello-world;print-my-shopping-list",
@@ -446,26 +411,17 @@ formatter.step({
     "content_type": ""
   }
 });
-formatter.match({
-  "location": "ShoppingStepdefs.a_shopping_list(ShoppingStepdefs$ShoppingItem\u003e)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 4565000,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "location": "ShoppingStepdefs.I_print_that_list()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 172000,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "location": "ShoppingStepdefs.it_should_look_like(String)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 26000,
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.scenario({
   "id": "hello-world;transformation",
@@ -490,43 +446,16 @@ formatter.step({
   "keyword": "Then ",
   "line": 28
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "Dec 6, 2012",
-      "offset": 10
-    }
-  ],
-  "location": "TimeStepdefs.today_is(Calendar)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 1566000,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "2 days ago",
-      "offset": 14
-    }
-  ],
-  "location": "TimeStepdefs.I_did_laundry_time_ago(Calendar)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 30889000,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "Dec 4, 2012",
-      "offset": 31
-    }
-  ],
-  "location": "TimeStepdefs.my_laundry_day_must_have_been(Calendar)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 246000,
-  "status": "passed"
+  "status": "undefined"
 });
 });
