@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <testsuite failures="1" tests="5">
-<testcase classname="Stock Position Calculation" name="Summarize stock position with the new trades ,with map" time="0.11133">
+<testcase classname="Stock Position Calculation" name="Summarize stock position with the new trades ,by order" time="0.093758">
 <system-out><![CDATA[Given the existing position as below:....................................................passed
 When there are following trades:......................................................passed
 Then the new position is as below:.....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Stock Position Calculation" name="Summarize stock position with the new trades,pure object" time="12.691107">
-<failure message="cucumber.runtime.table.TableDiffException: Tables were not identical:&#10;      | Stock ID | Stock Name | Buy Price | Quantity | Buy Date   | Capital | Current Price | Market Value | Profit | Earning Rate |&#10;      | 000001   | HSBC       | 67.33     | 1500     | 2012-08-01 | 101000  | 80            | 120000       | 19000  | 19%          |&#10;      | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |&#10;      | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 25%          |&#10;&#10;&#9;at agile.demo.cumcuber.StockPositionStepdefs.expectThePosition(StockPositionStepdefs.java:67)&#10;&#9;at ✽.Then the final position is as below:(agile/demo/cumcuber/StockPosition.feature:45)&#10;"><![CDATA[Given the existing position as below:....................................................passed
+<testcase classname="Stock Position Calculation" name="Summarize stock position with the new trades in any order" time="0.024919">
+<failure message="cucumber.runtime.table.TableDiffException: Tables were not identical:&#10;      | Stock ID | Stock Name | Buy Price | Quantity | Buy Date   | Capital | Current Price | Market Value | Profit | Earning Rate |&#10;      | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 21%          |&#10;      | 000001   | HSBC       | 67.33     | 1500     | 2012-08-01 | 101000  | 80            | 120000       | 19000  | 19%          |&#10;      | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |&#10;&#10;&#9;at agile.demo.cumcuber.StockPositionStepdefs.expectThePositionInAnyOrder(StockPositionStepdefs.java:83)&#10;&#9;at ✽.Then the final position is as below in any order:(agile/demo/cumcuber/StockPosition.feature:45)&#10;"><![CDATA[Given the existing position as below:....................................................passed
 When there are following trades:......................................................passed
-Then the final position is as below:....................................................failed
+Then the final position is as below in any order:..............................................failed
 
 StackTrace:
 cucumber.runtime.table.TableDiffException: Tables were not identical:
       | Stock ID | Stock Name | Buy Price | Quantity | Buy Date   | Capital | Current Price | Market Value | Profit | Earning Rate |
+      | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 21%          |
       | 000001   | HSBC       | 67.33     | 1500     | 2012-08-01 | 101000  | 80            | 120000       | 19000  | 19%          |
       | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |
-      | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 25%          |
 
-	at agile.demo.cumcuber.StockPositionStepdefs.expectThePosition(StockPositionStepdefs.java:67)
-	at ✽.Then the final position is as below:(agile/demo/cumcuber/StockPosition.feature:45)
+	at agile.demo.cumcuber.StockPositionStepdefs.expectThePositionInAnyOrder(StockPositionStepdefs.java:83)
+	at ✽.Then the final position is as below in any order:(agile/demo/cumcuber/StockPosition.feature:45)
 ]]></failure>
 </testcase>
-<testcase classname="Hello World" name="Say hello" time="0.001286">
+<testcase classname="Hello World" name="Say hello" time="0.001307">
 <system-out><![CDATA[Given I have a hello app with "Howdy"....................................................passed
 When I ask it to say hi...........................................................passed
 Then it should answer with "Howdy World"..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Hello World" name="Print my shopping list" time="0.002069">
+<testcase classname="Hello World" name="Print my shopping list" time="0.002001">
 <system-out><![CDATA[Given a shopping list:...........................................................passed
 When I print that list...........................................................passed
 Then it should look like:..........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Hello World" name="Transformation" time="0.033364">
+<testcase classname="Hello World" name="Transformation" time="0.035716">
 <system-out><![CDATA[Given today is "Dec 6, 2012"........................................................passed
 And I did laundry 2 days ago........................................................passed
 Then my laundry day must have been "Dec 4, 2012"..............................................passed

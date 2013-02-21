@@ -1,6 +1,6 @@
 Feature: Stock Position Calculation
 
-  Scenario: Summarize stock position with the new trades ,with map
+  Scenario: Summarize stock position with the new trades ,by order
   As an investor,I need to summarize my stock position with the new trades.For having a clear view on my stock position and investment P/L. 
   
     Given the existing position as below:
@@ -24,7 +24,7 @@ Feature: Stock Position Calculation
      |000002   |HASE       |50.83     |6000     |2012-07-01 |305000 |60           |360000        |55000 |18%| 
      |000003   |300ETF     |2.00      |51000    |2012-01-05 |102100 |2.5          |127500        |25400 |25%| 
      
-   Scenario: Summarize stock position with the new trades,pure object 
+   Scenario: Summarize stock position with the new trades in any order
   As an investor,I need to summarize my stock position with the new trades.For having a clear view on my stock position and investment P/L. 
   
     Given the existing position as below:
@@ -42,9 +42,10 @@ Feature: Stock Position Calculation
     |000002 |HASE |55 |2000 |2012-12-12 |110000 |BUY |
     |000003 |300ETF |2.1 |1000 |2012-12-12 |2100 |BUY |
 
-     Then the final position is as below: 
+     Then the final position is as below in any order: 
      |Stock ID |Stock Name |Buy Price |Quantity |Buy Date |Capital |Current Price |Market Value |Profit |Earning Rate |
+      |000003   |300ETF     |2.00      |51000    |2012-01-05 |102100 |2.5          |127500        |25400 |25%|   
      |000001   |HSBC       |67.33     |1500     |2012-08-01 |101000 |80           |120000        |19000 |19%| 
      |000002   |HASE       |50.83     |6000     |2012-07-01 |305000 |60           |360000        |55000 |18%| 
-     |000003   |300ETF     |2.00      |51000    |2012-01-05 |102100 |2.5          |127500        |25400 |25%|    
+     
      

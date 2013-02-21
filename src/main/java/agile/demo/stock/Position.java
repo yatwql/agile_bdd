@@ -64,6 +64,7 @@ public class Position {
 	}
 
 	public BigDecimal getCurrPrice() {
+
 		return currentPrice;
 	}
 
@@ -145,32 +146,36 @@ public class Position {
 		if (buyPrice == null) {
 			if (other.buyPrice != null)
 				return false;
-		} else if (!buyPrice.equals(other.buyPrice))
+		} else if (buyPrice.compareTo(other.buyPrice) != 0)
 			return false;
 		if (capital == null) {
 			if (other.capital != null)
 				return false;
-		} else if (!capital.equals(other.capital))
+		} else if (capital.compareTo(other.capital) != 0)
 			return false;
 		if (currentPrice == null) {
 			if (other.currentPrice != null)
 				return false;
-		} else if (!currentPrice.equals(other.currentPrice))
+
+		} else if (currentPrice.compareTo(other.currentPrice) != 0)
 			return false;
 		if (earningRate == null) {
 			if (other.earningRate != null)
 				return false;
-		} else if (!earningRate.equals(other.earningRate))
+
+		} else if (earningRate.compareTo(other.earningRate) != 0)
 			return false;
 		if (marketValue == null) {
 			if (other.marketValue != null)
 				return false;
-		} else if (!marketValue.equals(other.marketValue))
+
+		} else if (marketValue.compareTo(other.marketValue) != 0)
 			return false;
 		if (profit == null) {
 			if (other.profit != null)
 				return false;
-		} else if (!profit.equals(other.profit))
+
+		} else if (profit.compareTo(other.profit) != 0)
 			return false;
 		if (quantity != other.quantity)
 			return false;
@@ -185,11 +190,17 @@ public class Position {
 		} else if (!stockName.equals(other.stockName))
 			return false;
 		return true;
+
 	}
 
-	
-	
-	
-	
-	
+	@Override
+	public String toString() {
+		return "Position [stockID=" + stockID + ", stockName=" + stockName
+				+ ", buyPrice=" + buyPrice + ", quantity=" + quantity
+				+ ", buyDate=" + buyDate + ", capital=" + capital
+				+ ", currentPrice=" + currentPrice + ", marketValue="
+				+ marketValue + ", profit=" + profit + ", earningRate="
+				+ earningRate + "]";
+	}
+
 }

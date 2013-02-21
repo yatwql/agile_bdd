@@ -1,5 +1,6 @@
 package agile.demo.cumcuber;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -38,8 +39,8 @@ public class StockPositionStepdefs {
 
 	}
 
-	@Then("^the final position is as below:$")
-	public void expectThePosition(DataTable expectTable) throws Throwable {
+	@Then("^the final position is as below in any order:$")
+	public void expectThePositionInAnyOrder(DataTable expectTable) throws Throwable {
 
 		List<Position> actualPositions = calculator.getLatestPosition();
 
@@ -50,19 +51,34 @@ public class StockPositionStepdefs {
 				new TypeReference<List<Position>>() {
 				}.getType(), expectTable);
 
+
 		if (actualPositions.size() > 0) {
+			int count = expectPositions.size();
 
 			for (Position p : expectPositions) {
-				for (Position pn : actualPositions) {
-					if (p.equals(pn)) {
+				p.setEarningRate(p.getEarningRate().divide(
+						new BigDecimal("100")));
+				System.out.println(p);
+				boolean found = false;
+				int index = -1;
 
-						actualPositions.remove(pn);
-						expectPositions.remove(p);
+				for (Position pn : actualPositions) {
+					System.out.println(pn);
+					index++;
+					found = p.equals(pn);
+					if (found) {
+						break;
 					}
+
+				}
+
+				if (found) {
+					actualPositions.remove(index);
+					count--;
 				}
 			}
 
-			if (expectPositions.size() > 0 || actualPositions.size() > 0) {
+			if (actualPositions.size() > 0 || count > 0) {
 				throw new TableDiffException(expectTable);
 			}
 		}

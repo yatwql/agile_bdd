@@ -21,7 +21,7 @@ public class PositionCalculatorImpl implements PositionCalculator {
 		Position pos = new Position();
 		pos.setStockID("000001");
 		pos.setStockName("HSBC");
-		pos.setBuyPrice(new BigDecimal(67.33));
+		pos.setBuyPrice(new BigDecimal("67.33"));
 		pos.setQuantity(1500L);
 		try {
 			pos.setBuyDate(dateFormat.parse("2012-08-01"));
@@ -32,24 +32,24 @@ public class PositionCalculatorImpl implements PositionCalculator {
 		pos.setCurrPrice(new BigDecimal(80));
 		pos.setMarketValue(new BigDecimal(120000));
 		pos.setProfit(new BigDecimal(19000));
-		pos.setEarningRate(new BigDecimal(0.19));
+		pos.setEarningRate(new BigDecimal("0.19"));
 		latestPositions.add(pos);
 		
 		pos = new Position();
 		pos.setStockID("000002");
 		pos.setStockName("HASE");
-		pos.setBuyPrice(new BigDecimal(50.83));
+		pos.setBuyPrice(new BigDecimal("50.83"));
 		pos.setQuantity(6000L);
 		try {
 			pos.setBuyDate(dateFormat.parse("2012-07-01"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		pos.setCapital(new BigDecimal(305000));
+		pos.setCapital(new BigDecimal("305000"));
 		pos.setCurrPrice(new BigDecimal(60));
 		pos.setMarketValue(new BigDecimal(360000));
 		pos.setProfit(new BigDecimal(55000));
-		pos.setEarningRate(new BigDecimal(0.18));
+		pos.setEarningRate(new BigDecimal("0.18"));
 		latestPositions.add(pos);
 		
 		pos = new Position();
@@ -63,10 +63,10 @@ public class PositionCalculatorImpl implements PositionCalculator {
 			e.printStackTrace();
 		}
 		pos.setCapital(new BigDecimal(102100));
-		pos.setCurrPrice(new BigDecimal(2.5));
+		pos.setCurrPrice(new BigDecimal("2.5"));
 		pos.setMarketValue(new BigDecimal(127500));
 		pos.setProfit(new BigDecimal(25400));
-		pos.setEarningRate(new BigDecimal(0.25));
+		pos.setEarningRate(new BigDecimal("0.25"));
 		latestPositions.add(pos);
 		
 		return latestPositions;
