@@ -106,38 +106,90 @@ public class Position {
 		super();
 	}
 
-	public boolean equals(Object o) {
-		if (o == this) {
-			return true;
-		}
-
-		if (o == null || !(o instanceof Position)) {
-			return false;
-		}
-
-		Position pn = (Position) o;
-
-		boolean result = pn.stockID.equals(this.stockID)
-				&& pn.stockName.equals(this.stockName)
-				&& pn.buyDate.equals(this.buyDate)
-				&& pn.buyPrice.equals(this.buyPrice)
-				&& pn.capital.equals(this.capital);
-
-		if (result) {
-
-			result = result && pn.currentPrice.equals(this.currentPrice)
-					&& pn.earningRate.equals(this.earningRate);
-		}
-
-		if (result) {
-			result = result && pn.marketValue.equals(this.marketValue)
-					&& pn.profit.equals(this.profit)
-					&& pn.quantity == this.quantity;
-		}
-
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((buyDate == null) ? 0 : buyDate.hashCode());
+		result = prime * result
+				+ ((buyPrice == null) ? 0 : buyPrice.hashCode());
+		result = prime * result + ((capital == null) ? 0 : capital.hashCode());
+		result = prime * result
+				+ ((currentPrice == null) ? 0 : currentPrice.hashCode());
+		result = prime * result
+				+ ((earningRate == null) ? 0 : earningRate.hashCode());
+		result = prime * result
+				+ ((marketValue == null) ? 0 : marketValue.hashCode());
+		result = prime * result + ((profit == null) ? 0 : profit.hashCode());
+		result = prime * result + (int) (quantity ^ (quantity >>> 32));
+		result = prime * result + ((stockID == null) ? 0 : stockID.hashCode());
+		result = prime * result
+				+ ((stockName == null) ? 0 : stockName.hashCode());
 		return result;
-
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Position other = (Position) obj;
+		if (buyDate == null) {
+			if (other.buyDate != null)
+				return false;
+		} else if (!buyDate.equals(other.buyDate))
+			return false;
+		if (buyPrice == null) {
+			if (other.buyPrice != null)
+				return false;
+		} else if (!buyPrice.equals(other.buyPrice))
+			return false;
+		if (capital == null) {
+			if (other.capital != null)
+				return false;
+		} else if (!capital.equals(other.capital))
+			return false;
+		if (currentPrice == null) {
+			if (other.currentPrice != null)
+				return false;
+		} else if (!currentPrice.equals(other.currentPrice))
+			return false;
+		if (earningRate == null) {
+			if (other.earningRate != null)
+				return false;
+		} else if (!earningRate.equals(other.earningRate))
+			return false;
+		if (marketValue == null) {
+			if (other.marketValue != null)
+				return false;
+		} else if (!marketValue.equals(other.marketValue))
+			return false;
+		if (profit == null) {
+			if (other.profit != null)
+				return false;
+		} else if (!profit.equals(other.profit))
+			return false;
+		if (quantity != other.quantity)
+			return false;
+		if (stockID == null) {
+			if (other.stockID != null)
+				return false;
+		} else if (!stockID.equals(other.stockID))
+			return false;
+		if (stockName == null) {
+			if (other.stockName != null)
+				return false;
+		} else if (!stockName.equals(other.stockName))
+			return false;
+		return true;
+	}
+
+	
+	
+	
 	
 	
 }
