@@ -28,18 +28,49 @@ public class StockPositionStepdefs {
 	public void calTrades(DataTable trades) throws Throwable {
 
 	}
-
+	
 	@Then("^the new position is as below:$")
-	public void expectThePositionWithMap(DataTable expectPositions)
+	public void expectThePositionWithMap(DataTable expectTable)
 			throws Throwable {
 		List<Map<String, String>> actualPositions = calculator
-				.getLatestPositionAsMap();
+		.getLatestPositionAsMap();
 
-		expectPositions.diff(actualPositions);
+		expectTable.diff(actualPositions);
+
 
 	}
 
-	@Then("^the final position is as below in any order:$")
+	@Then("^the new position is as below by order:$")
+	public void expectThePositionByOrder(DataTable expectTable)
+			throws Throwable {
+		//List<Map<String, String>> actualPositions = calculator
+			//	.getLatestPositionAsMap();
+
+		//expectTable.diff(actualPositions);
+		//DataTable actualTable = DataTable.create(calculator.getLatestPosition(), "yyyy-MM-dd");
+		
+		//expectPositions.diff(actualTable.diffableRows());
+		
+		List<Position> actualPositions = calculator.getLatestPosition();
+
+		DataTable actualTable = DataTable.create(actualPositions, "yyyy-MM-dd");
+
+		TableConverter tableConverter = actualTable.getTableConverter();
+		List<Position> expectPositions = tableConverter.convert(
+				new TypeReference<List<Position>>() {
+				}.getType(), expectTable);
+		for (Position p : expectPositions) {
+			p.setEarningRate(p.getEarningRate().divide(
+					new BigDecimal("100")));
+		}
+		
+		//expectTable.cells(1);
+		
+		DataTable.create(expectPositions,"yyyy-MM-dd").diff(actualTable);
+
+	}
+
+	@Then("^the new position is as below in any order:$")
 	public void expectThePositionInAnyOrder(DataTable expectTable) throws Throwable {
 
 		List<Position> actualPositions = calculator.getLatestPosition();

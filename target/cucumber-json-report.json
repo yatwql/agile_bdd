@@ -7,20 +7,26 @@
     "line": 1,
     "elements": [
       {
-        "id": "stock-position-calculation;summarize-stock-position-with-the-new-trades-,by-order",
+        "id": "stock-position-calculation;summarize-stock-position-with-the-new-trades,-by-order",
+        "tags": [
+          {
+            "name": "@StockSpec",
+            "line": 2
+          }
+        ],
         "description": "As an investor,I need to summarize my stock position with the new trades.For having a clear view on my stock position and investment P/L.",
-        "name": "Summarize stock position with the new trades ,by order",
+        "name": "Summarize stock position with the new trades, by order",
         "keyword": "Scenario",
-        "line": 3,
+        "line": 4,
         "steps": [
           {
             "result": {
-              "duration": 79388000,
+              "duration": 82222000,
               "status": "passed"
             },
             "name": "the existing position as below:",
             "keyword": "Given ",
-            "line": 6,
+            "line": 7,
             "match": {
               "location": "StockPositionStepdefs.givenExistingPosition(DataTable)"
             },
@@ -38,7 +44,7 @@
                   "Profit",
                   "Earning Rate"
                 ],
-                "line": 7
+                "line": 8
               },
               {
                 "cells": [
@@ -53,7 +59,7 @@
                   "10000",
                   "14%"
                 ],
-                "line": 8
+                "line": 9
               },
               {
                 "cells": [
@@ -68,7 +74,7 @@
                   "50000",
                   "20%"
                 ],
-                "line": 9
+                "line": 10
               },
               {
                 "cells": [
@@ -83,18 +89,18 @@
                   "25000",
                   "25%"
                 ],
-                "line": 10
+                "line": 11
               }
             ]
           },
           {
             "result": {
-              "duration": 49000,
+              "duration": 46000,
               "status": "passed"
             },
             "name": "there are following trades:",
             "keyword": "When ",
-            "line": 12,
+            "line": 13,
             "match": {
               "location": "StockPositionStepdefs.calTrades(DataTable)"
             },
@@ -109,7 +115,7 @@
                   "Amount",
                   "Buy Or Sell"
                 ],
-                "line": 14
+                "line": 15
               },
               {
                 "cells": [
@@ -121,7 +127,7 @@
                   "65000",
                   "BUY"
                 ],
-                "line": 15
+                "line": 16
               },
               {
                 "cells": [
@@ -131,18 +137,6 @@
                   "500",
                   "2012-11-12",
                   "34000",
-                  "SELL"
-                ],
-                "line": 16
-              },
-              {
-                "cells": [
-                  "000002",
-                  "HASE",
-                  "55",
-                  "1000",
-                  "2012-11-12",
-                  "55000",
                   "SELL"
                 ],
                 "line": 17
@@ -152,247 +146,15 @@
                   "000002",
                   "HASE",
                   "55",
-                  "2000",
-                  "2012-12-12",
-                  "110000",
-                  "BUY"
+                  "1000",
+                  "2012-11-12",
+                  "55000",
+                  "SELL"
                 ],
                 "line": 18
               },
               {
                 "cells": [
-                  "000003",
-                  "300ETF",
-                  "2.1",
-                  "1000",
-                  "2012-12-12",
-                  "2100",
-                  "BUY"
-                ],
-                "line": 19
-              }
-            ]
-          },
-          {
-            "result": {
-              "duration": 14321000,
-              "status": "passed"
-            },
-            "name": "the new position is as below:",
-            "keyword": "Then ",
-            "line": 21,
-            "match": {
-              "location": "StockPositionStepdefs.expectThePositionWithMap(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "Stock ID",
-                  "Stock Name",
-                  "Buy Price",
-                  "Quantity",
-                  "Buy Date",
-                  "Capital",
-                  "Current Price",
-                  "Market Value",
-                  "Profit",
-                  "Earning Rate"
-                ],
-                "line": 22
-              },
-              {
-                "cells": [
-                  "000001",
-                  "HSBC",
-                  "67.33",
-                  "1500",
-                  "2012-08-01",
-                  "101000",
-                  "80",
-                  "120000",
-                  "19000",
-                  "19%"
-                ],
-                "line": 23
-              },
-              {
-                "cells": [
-                  "000002",
-                  "HASE",
-                  "50.83",
-                  "6000",
-                  "2012-07-01",
-                  "305000",
-                  "60",
-                  "360000",
-                  "55000",
-                  "18%"
-                ],
-                "line": 24
-              },
-              {
-                "cells": [
-                  "000003",
-                  "300ETF",
-                  "2.00",
-                  "51000",
-                  "2012-01-05",
-                  "102100",
-                  "2.5",
-                  "127500",
-                  "25400",
-                  "25%"
-                ],
-                "line": 25
-              }
-            ]
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "id": "stock-position-calculation;summarize-stock-position-with-the-new-trades-in-any-order",
-        "description": "As an investor,I need to summarize my stock position with the new trades.For having a clear view on my stock position and investment P/L.",
-        "name": "Summarize stock position with the new trades in any order",
-        "keyword": "Scenario",
-        "line": 27,
-        "steps": [
-          {
-            "result": {
-              "duration": 51000,
-              "status": "passed"
-            },
-            "name": "the existing position as below:",
-            "keyword": "Given ",
-            "line": 30,
-            "match": {
-              "location": "StockPositionStepdefs.givenExistingPosition(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "Stock ID",
-                  "Stock Name",
-                  "Buy Price",
-                  "Quantity",
-                  "Buy Date",
-                  "Capital",
-                  "Current Price",
-                  "Market Value",
-                  "Profit",
-                  "Earning Rate"
-                ],
-                "line": 31
-              },
-              {
-                "cells": [
-                  "000001",
-                  "HSBC",
-                  "70",
-                  "1000",
-                  "2012-08-01",
-                  "70000",
-                  "80",
-                  "80000",
-                  "10000",
-                  "14%"
-                ],
-                "line": 32
-              },
-              {
-                "cells": [
-                  "000002",
-                  "HASE",
-                  "50",
-                  "5000",
-                  "2012-07-01",
-                  "250000",
-                  "60",
-                  "300000",
-                  "50000",
-                  "20%"
-                ],
-                "line": 33
-              },
-              {
-                "cells": [
-                  "000003",
-                  "300ETF",
-                  "2",
-                  "5000",
-                  "2012-01-05",
-                  "100000",
-                  "2.5",
-                  "125000",
-                  "25000",
-                  "25%"
-                ],
-                "line": 34
-              }
-            ]
-          },
-          {
-            "result": {
-              "duration": 42000,
-              "status": "passed"
-            },
-            "name": "there are following trades:",
-            "keyword": "When ",
-            "line": 36,
-            "match": {
-              "location": "StockPositionStepdefs.calTrades(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "Stock ID",
-                  "Stock Name",
-                  "Price",
-                  "Quantity",
-                  "Date",
-                  "Amount",
-                  "Buy Or Sell"
-                ],
-                "line": 38
-              },
-              {
-                "cells": [
-                  "000001",
-                  "HSBC",
-                  "65",
-                  "1000",
-                  "2012-10-01",
-                  "65000",
-                  "BUY"
-                ],
-                "line": 39
-              },
-              {
-                "cells": [
-                  "000001",
-                  "HSBC",
-                  "68",
-                  "500",
-                  "2012-11-12",
-                  "34000",
-                  "SELL"
-                ],
-                "line": 40
-              },
-              {
-                "cells": [
-                  "000002",
-                  "HASE",
-                  "55",
-                  "1000",
-                  "2012-11-12",
-                  "55000",
-                  "SELL"
-                ],
-                "line": 41
-              },
-              {
-                "cells": [
                   "000002",
                   "HASE",
                   "55",
@@ -401,7 +163,7 @@
                   "110000",
                   "BUY"
                 ],
-                "line": 42
+                "line": 19
               },
               {
                 "cells": [
@@ -413,21 +175,20 @@
                   "2100",
                   "BUY"
                 ],
-                "line": 43
+                "line": 20
               }
             ]
           },
           {
             "result": {
-              "duration": 24826000,
-              "status": "failed",
-              "error_message": "cucumber.runtime.table.TableDiffException: Tables were not identical:\n      | Stock ID | Stock Name | Buy Price | Quantity | Buy Date   | Capital | Current Price | Market Value | Profit | Earning Rate |\n      | 000003   | 300ETF     | 2.00      | 51000    | 2012-01-05 | 102100  | 2.5           | 127500       | 25400  | 21%          |\n      | 000001   | HSBC       | 67.33     | 1500     | 2012-08-01 | 101000  | 80            | 120000       | 19000  | 19%          |\n      | 000002   | HASE       | 50.83     | 6000     | 2012-07-01 | 305000  | 60            | 360000       | 55000  | 18%          |\n\n\tat agile.demo.cumcuber.StockPositionStepdefs.expectThePositionInAnyOrder(StockPositionStepdefs.java:83)\n\tat ✽.Then the final position is as below in any order:(agile/demo/cumcuber/StockPosition.feature:45)\n"
+              "duration": 35214000,
+              "status": "passed"
             },
-            "name": "the final position is as below in any order:",
+            "name": "the new position is as below by order:",
             "keyword": "Then ",
-            "line": 45,
+            "line": 22,
             "match": {
-              "location": "StockPositionStepdefs.expectThePositionInAnyOrder(DataTable)"
+              "location": "StockPositionStepdefs.expectThePositionByOrder(DataTable)"
             },
             "rows": [
               {
@@ -443,22 +204,7 @@
                   "Profit",
                   "Earning Rate"
                 ],
-                "line": 46
-              },
-              {
-                "cells": [
-                  "000003",
-                  "300ETF",
-                  "2.00",
-                  "51000",
-                  "2012-01-05",
-                  "102100",
-                  "2.5",
-                  "127500",
-                  "25400",
-                  "21%"
-                ],
-                "line": 47
+                "line": 23
               },
               {
                 "cells": [
@@ -473,7 +219,7 @@
                   "19000",
                   "19%"
                 ],
-                "line": 48
+                "line": 24
               },
               {
                 "cells": [
@@ -488,7 +234,22 @@
                   "55000",
                   "18%"
                 ],
-                "line": 49
+                "line": 25
+              },
+              {
+                "cells": [
+                  "000003",
+                  "300ETF",
+                  "2.00",
+                  "51000",
+                  "2012-01-05",
+                  "102100",
+                  "2.5",
+                  "127500",
+                  "25400",
+                  "25%"
+                ],
+                "line": 26
               }
             ]
           }
@@ -497,218 +258,5 @@
       }
     ],
     "uri": "agile/demo/cumcuber/StockPosition.feature"
-  },
-  {
-    "id": "hello-world",
-    "description": "",
-    "name": "Hello World",
-    "keyword": "Feature",
-    "line": 1,
-    "elements": [
-      {
-        "id": "hello-world;say-hello",
-        "description": "",
-        "name": "Say hello",
-        "keyword": "Scenario",
-        "line": 3,
-        "steps": [
-          {
-            "result": {
-              "duration": 120000,
-              "status": "passed"
-            },
-            "name": "I have a hello app with \"Howdy\"",
-            "keyword": "Given ",
-            "line": 4,
-            "match": {
-              "arguments": [
-                {
-                  "val": "Howdy",
-                  "offset": 25
-                }
-              ],
-              "location": "HelloStepdefs.I_have_a_hello_app_with(String)"
-            }
-          },
-          {
-            "result": {
-              "duration": 26000,
-              "status": "passed"
-            },
-            "name": "I ask it to say hi",
-            "keyword": "When ",
-            "line": 5,
-            "match": {
-              "location": "HelloStepdefs.I_ask_it_to_say_hi()"
-            }
-          },
-          {
-            "result": {
-              "duration": 1161000,
-              "status": "passed"
-            },
-            "name": "it should answer with \"Howdy World\"",
-            "keyword": "Then ",
-            "line": 6,
-            "match": {
-              "arguments": [
-                {
-                  "val": "Howdy World",
-                  "offset": 23
-                }
-              ],
-              "location": "HelloStepdefs.it_should_answer_with(String)"
-            }
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "id": "hello-world;print-my-shopping-list",
-        "description": "The list should be printed in alphabetical order of the item names",
-        "name": "Print my shopping list",
-        "keyword": "Scenario",
-        "line": 8,
-        "steps": [
-          {
-            "result": {
-              "duration": 1731000,
-              "status": "passed"
-            },
-            "name": "a shopping list:",
-            "keyword": "Given ",
-            "line": 11,
-            "match": {
-              "location": "ShoppingStepdefs.a_shopping_list(ShoppingStepdefs$ShoppingItem\u003e)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "name",
-                  "count"
-                ],
-                "line": 12
-              },
-              {
-                "cells": [
-                  "Milk",
-                  "2"
-                ],
-                "line": 13
-              },
-              {
-                "cells": [
-                  "Cocoa",
-                  "1"
-                ],
-                "line": 14
-              },
-              {
-                "cells": [
-                  "Soap",
-                  "5"
-                ],
-                "line": 15
-              }
-            ]
-          },
-          {
-            "result": {
-              "duration": 231000,
-              "status": "passed"
-            },
-            "name": "I print that list",
-            "keyword": "When ",
-            "line": 16,
-            "match": {
-              "location": "ShoppingStepdefs.I_print_that_list()"
-            }
-          },
-          {
-            "result": {
-              "duration": 39000,
-              "status": "passed"
-            },
-            "name": "it should look like:",
-            "keyword": "Then ",
-            "line": 17,
-            "doc_string": {
-              "value": "1 Cocoa\n2 Milk\n5 Soap\n",
-              "line": 18,
-              "content_type": ""
-            },
-            "match": {
-              "location": "ShoppingStepdefs.it_should_look_like(String)"
-            }
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "id": "hello-world;transformation",
-        "description": "",
-        "name": "Transformation",
-        "keyword": "Scenario",
-        "line": 25,
-        "steps": [
-          {
-            "result": {
-              "duration": 2533000,
-              "status": "passed"
-            },
-            "name": "today is \"Dec 6, 2012\"",
-            "keyword": "Given ",
-            "line": 26,
-            "match": {
-              "arguments": [
-                {
-                  "val": "Dec 6, 2012",
-                  "offset": 10
-                }
-              ],
-              "location": "TimeStepdefs.today_is(Calendar)"
-            }
-          },
-          {
-            "result": {
-              "duration": 32936000,
-              "status": "passed"
-            },
-            "name": "I did laundry 2 days ago",
-            "keyword": "And ",
-            "line": 27,
-            "match": {
-              "arguments": [
-                {
-                  "val": "2 days ago",
-                  "offset": 14
-                }
-              ],
-              "location": "TimeStepdefs.I_did_laundry_time_ago(Calendar)"
-            }
-          },
-          {
-            "result": {
-              "duration": 247000,
-              "status": "passed"
-            },
-            "name": "my laundry day must have been \"Dec 4, 2012\"",
-            "keyword": "Then ",
-            "line": 28,
-            "match": {
-              "arguments": [
-                {
-                  "val": "Dec 4, 2012",
-                  "offset": 31
-                }
-              ],
-              "location": "TimeStepdefs.my_laundry_day_must_have_been(Calendar)"
-            }
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "uri": "agile/demo/cumcuber/helloworld.feature"
   }
 ]
