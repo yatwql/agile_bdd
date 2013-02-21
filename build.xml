@@ -22,15 +22,11 @@
         <fileset dir="lib" includes="**/*.jar"/>
     </path>
 	
-	  <target name="classpath">
-        <path id="classpath">
-            <fileset dir="${jars}">
-                <include name="**/*.jar"/>
-            </fileset>
+    <path id="classpath">
+            <path refid="compile.classpath"/>
             <pathelement location="target/classes"/>
             <pathelement location="target/test-classes"/>
-        </path>
-    </target>
+     </path>
 	
 	  <target name="download">
         <mkdir dir="${jars}"/>
@@ -111,7 +107,7 @@
 	  <target name="run.cukes" depends="compile">
         <mkdir dir="target/cucumber-junit-report"/>
         <java classname="cucumber.api.cli.Main" fork="true" failonerror="false" resultproperty="cucumber.exitstatus">
-            <classpath refid="compile.classpath"/>
+            <classpath refid="classpath"/>
             <arg value="--format"/>
             <arg value="junit:target/cucumber-junit-report.xml"/>
             <arg value="--format"/>
