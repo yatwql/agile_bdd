@@ -20,7 +20,7 @@
 			<table
 			concordion:execute="initPosition(#stockId, #stockName, #buyPrice, #quantity, #buyDate, #capital, #currPrice, #marketValue, #profit, #earningRate)">
 			<tr>
-				<th concordion:set="#stockID">Stock ID</th>
+				<th concordion:set="#stockId">Stock ID</th>
 				<th concordion:set="#stockName">Stock Name</th>
 				<th concordion:set="#buyPrice">Buy Price</th>
 				<th concordion:set="#quantity">Quantity</th>
@@ -144,7 +144,7 @@
 			<table
 			concordion:verifyRows="#position : getLatestPosition()">
 			<tr>
-				<th concordion:assertEquals="#position.stockId">Stock ID</th>
+				<th concordion:assertEquals="#position.stockID">Stock ID</th>
 				<th concordion:assertEquals="#position.stockName">Stock Name</th>
 				<th concordion:assertEquals="convertBuyPrice(#position)">Buy Price</th>
 				<th concordion:assertEquals="#position.quantity">Quantity</th>
